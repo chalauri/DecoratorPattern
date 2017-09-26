@@ -6,6 +6,6 @@ package main.java.decorator.examples;
 public interface GraphicalComponent {
 
     void paint();
-    void addContent(Object content);
+    GraphicalComponent addContent(Object content);
 
 }

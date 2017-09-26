@@ -18,8 +18,14 @@ public class TextBox implements GraphicalComponent {
     }
 
     @Override
-    public void addContent(Object content) {
+    public GraphicalComponent addContent(Object content) {
         assert (content instanceof String);
         this.lines.add((String) content);
+        if(this.lines.size() == 2 ){
+            //Add scroll bar dec
+            return new ScrollBarDecorator(this);
+        }
+
+        return this;
     }
 }
